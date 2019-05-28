@@ -1,0 +1,19 @@
+<div class="wrap">
+  <div class="search">
+    <input type="text" class="searchTerm" [(ngModel)]="searchValue" (keyup)="keyPressOption($event)" (input)="searchData($event.target.value)"
+      placeholder="What are you looking for?">
+    <button type="submit" class="searchButton" (click)="cleanInput()">
+      <i class="fa fa-remove"></i>
+    </button>
+  </div>
+  <div class="search-result-container">
+    <div *ngIf="results.length > 0" class="search-result">
+      <div *ngFor="let header of results; let i = index" class="hoverd-item" [ngClass]="{ 'activeTab': i == selectedIndex }"
+        (click)="chooseItem(header)">
+        <span class="active" *ngIf="header">{{header.bold}}</span>
+        <span *ngIf="header">{{header.normal}}</span>
+        <div *ngIf="i != results.length-1" class="line"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.searchTerm {
+    width: 30%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black;
+}
+
+.searchTerm:focus {
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 100%;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+.wrap {
+    height: 500px;
+    ;
+    width: auto;
+}
+
+.search-result-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-result {
+    width: calc(30% + 40px);
+    border: 1px solid #00B4CC;
+    border-radius: 0 5px 5px 0;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.active {
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border: 1px solid #00B4CC;
+}
+
+.hoverd-item:hover {
+    background-color: rgb(234, 244, 245);
+    cursor: pointer;
+}
+
+.activeTab {
+    background-color: rgb(234, 244, 245);
+    cursor: pointer;
+}
